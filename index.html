@@ -83,13 +83,28 @@
 
       
 <p>
-    More about html <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"> wiki href</a>
+    wiki link: <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"> https://ru.wikipedia.org/wiki/HTML</a>
 </p>
+
 
 <video width="640" height="360" controls>
   <source src="video.mp4" type="video/mp4">
   Can't play this video
 </video>
+
+<h2>Simple Form(TEST only)</h2>
+<form action="https://example.com/submit" method="get">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea>
+  <br><br>
+  <input type="submit" value="Send">
+</form>
 
 
 </body>
