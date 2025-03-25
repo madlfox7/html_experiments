@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What is HTML?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+  body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f9f9f9; /* Lighter gray for a more polished look */
+    color: #333; /* Standard dark text for readability */
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+aside {
+    width: 220px; /* Slightly larger sidebar for better content display */
+    background: #4CAF50;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    border-right: 2px solid #ccc;
+    color: white;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 12px 0;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: white; /* White text for links */
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+aside ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    padding-left: 15px; /* Slight padding change for better hover effect */
+}
+
+aside ul li a.active {
+    background: #333;
+    color: white;
+}
+
+.content {
+    margin-left: 150px; /* Adjusted to accommodate the larger sidebar */
+    padding: 30px;
+    flex-grow: 1;
+    display: block;
+    max-width: 100%;
+    background: #ffffff; /* White background for the content section */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-of-contents a {
+    color: #2d7a2d;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+.note {
+    background: #fff3cd;
+    color: #856404;
+    padding: 20px;
+    border-left: 6px solid #ffcc00;
+    margin: 25px 0;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.note ul {
+    margin: 10px 0 0;
+    padding-left: 25px;
+}
+
+.note ul li {
+    margin: 8px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 20px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: #388E3C;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <aside>
+            <h1>HTML topics</h1>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="html_intro.html">HTML Introduction</a></li>
+                <li><a href="css_basics.html">CSS Basics</a></li>
+                <li><a href="javascript_intro.html">JavaScript Introduction</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <h1>What is HTML?</h1>
+
+            <div class="table-of-contents">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#html-intro">Introduction to HTML</a></li>
+                    <li><a href="#html-element">HTML Element</a></li>
+                    <li><a href="#html-example">HTML Code Example</a></li>
+                </ul>
+            </div>
+
+            <div id="html-intro">
+                <h2>Short Intro to HTML</h2>
+                <ul>
+                    <li>HTML (HyperText Markup Language) is the standard language used to create web pages.</li>
+                    <li>HTML was invented by Tim Berners-Lee.</li>
+                    <li>It uses a system of elements and tags to structure content, such as headings, paragraphs, links, and images.</li>
+                    <li>HTML works alongside CSS for styling and JavaScript for interactivity.</li>
+                    <li>It is the foundation of all websites on the internet and describes the structure of a webpage.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div id="html-element">
+                <h3>HTML Element</h3>
+                <p>An HTML element consists of an opening tag, content, and a closing tag<br>
+                   HTML can also have empty tags without content and closing tag(for example &lthr&gt, &ltbr&gt, etc) </p>
+
+                <pre>
+                    &lt;opening_tag&gt;Content&lt;/closing_tag&gt;
+                </pre>
+
+                <pre>
+                    &lt;p&gt;This is a paragraph&lt;/p&gt;
+                </pre>
+
+                <div class="note">
+                    <p><strong>Note:</strong></p>
+                    <ul>
+                        <li>HTML is not case-sensitive, but it's best practice to write tags in lowercase.</li>
+                        <li>Always close your HTML tags properly to avoid unexpected behavior.</li>
+                        <li>Use semantic elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> for better structure.</li>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li><strong>Opening Tag:</strong> The starting tag that defines the element.</li>
+                    <li><strong>Content:</strong> The information inside the element.</li>
+                    <li><strong>Closing Tag:</strong> The ending tag that marks the end of the element.</li>
+                </ul>
+            </div>
+
+            <div id="html-example">
+                <h3>HTML Code Example</h3>
+                <p>HTML code looks like this:</p>
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Sample Page&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </div>
+
+            <button onclick="history.back()">Go Back</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; RS | 2025</p>
+    </footer>
+
+</body>
+</html>
