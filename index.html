@@ -1,62 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Space</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>RS's Study Space</h1>
-    <p>My personal hub for learning, revising, and exploring code!</p>
-  </header>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <p id="error-msg" class="error"></p>
+        <button onclick="login()">Login</button>
+    </div>
 
-  <nav>
-    <a href="page1.html">Html</a>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="cheatsheet.html">CheatSheet</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </nav>
+    <script>
+       function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var errorMsg = document.getElementById("error-msg");
 
-  <div class="container">
-    <h2>About Me</h2>
-    <p>Hi! I'm RS, a student learning HTML, CSS, C++, and more. I made this site to organize my study materials and practice my web development skills.</p>
+    if (username === "admin" && password === "1234") {
+        localStorage.setItem("loggedIn", "true"); // Store login status
+        alert("Login successful!");
+        window.location.href = "home.html"; // Redirect to home page
+    } else {
+        errorMsg.textContent = "Invalid username or password!";
+    }
+}
 
-    <h2>My Study Plan</h2>
-    <table>
-      <tr><th>Day</th><th>Subject</th></tr>
-      <tr><td>Monday</td><td>HTML & CSS</td></tr>
-      <tr><td>Tuesday</td><td>C++</td></tr>
-      <tr><td>Wednesday</td><td>Linux / Git</td></tr>
-      <tr><td>Thursday</td><td>Docker / Networks</td></tr>
-      <tr><td>Friday</td><td>42 Exam Prep</td></tr>
-    </table>
-
-    <h2>Quick Resources</h2>
-    <ul>
-      <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Cheat Sheet</a></li>
-      <li><a href="https://www.w3schools.com/css/" target="_blank">CSS Cheat Sheet</a></li>
-      <li><a href="https://cplusplus.com/" target="_blank">C++ Reference</a></li>
-    </ul>
-
-    <h2>Leave a Note</h2>
-    <form>
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Write your name here">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" placeholder="Write your note here.."></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-  </div>
-
-  <footer>
-    <p>Created by RS | 2025</p>
-  </footer>
+    </script>
 
 </body>
 </html>

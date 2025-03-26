@@ -145,9 +145,9 @@ button:active {
         <aside>
             <h1>HTML topics</h1>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="html_intro.html">HTML Introduction</a></li>
-                <li><a href="css_basics.html">CSS Basics</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="html_intro.html" class="active">HTML Introduction</a></li>
+                <li><a href="cheatsheet.html">HTML cheatsheet</a></li>
                 <li><a href="javascript_intro.html">JavaScript Introduction</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -225,13 +225,25 @@ button:active {
                 </pre>
             </div>
 
-            <button onclick="history.back()">Go Back</button>
+            <button onclick="goToPage()">Go Back</button>
+
+<script>
+  function goToPage() {
+    window.location.href = ".html"; 
+  }
+</script>
         </div>
     </div>
 
     <footer>
         <p>&copy; RS | 2025</p>
     </footer>
-
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            alert("You must log in first!");
+            window.location.href = "index.html"; // Redirect back to login page
+        }
+    </script>
+    
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Space</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>RS's Study Space</h1>
+    <p>My personal hub for learning, revising, and exploring code!</p>
+  </header>
+
+  <nav>
+    <a href="page1.html">Html</a>
+    <a href="#">Home</a>
+    <a href="index.html">Login</a>
+    <a href="cheatsheet.html">CheatSheet</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>About Me</h2>
+    <p>Hi! I'm RS, a student learning HTML, CSS, C++, and more. I made this site to organize my study materials and practice my web development skills.</p>
+
+    <h2>My Study Plan</h2>
+    <table>
+      <tr><th>Day</th><th>Subject</th></tr>
+      <tr><td>Monday</td><td>HTML & CSS</td></tr>
+      <tr><td>Tuesday</td><td>C++</td></tr>
+      <tr><td>Wednesday</td><td>Linux / Git</td></tr>
+      <tr><td>Thursday</td><td>Docker / Networks</td></tr>
+      <tr><td>Friday</td><td>42 Exam Prep</td></tr>
+    </table>
+
+    <h2>Quick Resources</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Cheat Sheet</a></li>
+      <li><a href="https://www.w3schools.com/css/" target="_blank">CSS Cheat Sheet</a></li>
+      <li><a href="https://cplusplus.com/" target="_blank">C++ Reference</a></li>
+    </ul>
+
+    <h2>Leave a Note</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Write your name here">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your note here.."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>Created by RS | 2025</p>
+  </footer>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+        alert("You must log in first!");
+        window.location.href = "index.html"; // Redirect back to login page
+    }
+</script>
+
+</body>
+</html>

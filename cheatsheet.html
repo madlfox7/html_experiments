@@ -233,6 +233,11 @@ nav a:hover {
     <footer>
         <p>&copy; RS | 2025</p>
     </footer>
-
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            alert("You must log in first!");
+            window.location.href = "index.html"; // Redirect back to login page
+        }
+    </script>
 </body>
 </html>
