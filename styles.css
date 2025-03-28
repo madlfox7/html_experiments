@@ -7,12 +7,13 @@
     background-color: white;
 }
 
-/* Flex container for centering content on any screen */
+/* Flex container to center content */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensures full height but allows content overflow */
+    padding: 20px; /* Prevents elements from getting squished */
 }
 
 /* Main wrapper */
@@ -22,30 +23,29 @@ body {
     align-items: center;
     gap: 10px; /* Space between elements */
     width: 100%;
-    max-width: 400px; /* Ensures content doesn't stretch too wide */
+    max-width: 400px; /* Prevents excessive stretching */
     text-align: center;
 }
 
 /* Logo */
 .logo img {
-    width: 340px; /* Adjust as needed */
+    width: 300px; /* Adjust size */
     height: auto;
-    margin-bottom: 10px; /* Adjust space below the image */
-    margin-block-end: -50px;
-    margin-top: -35px;
+    margin-bottom: 10px;
 }
 
 /* Title */
 h1 {
-    font-size: 40px;
+    font-size: 30px;
     color: #333;
+    margin-bottom: 10px;
 }
 
-/* Form box */
+/* Login form */
 .login {
     width: 100%;
     padding: 20px;
-    background: auto;
+    background: rgba(244, 244, 244, 0.9);
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -88,9 +88,12 @@ h1 {
     background: #0056b3;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
+/* Adjust layout for small screens */
+@media (max-height: 600px) {
+    body {
+        align-items: flex-start; /* Prevents squishing on small heights */
+    }
     .container {
-        max-width: 90%;
+        margin-top: 20px;
     }
 }
