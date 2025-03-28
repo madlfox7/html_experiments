@@ -1,76 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .login-container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-        }
-    </style>
+    <title>Вход в АЛ</title>
+    <link rel="icon" type="image/x-icon" href="fav.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="logo">
+            <img src="growth.png" alt="Академия Lenny">
+        </div>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <p id="error-msg" class="error"></p>
-        <button onclick="login()">Login</button>
+        <h1>Вход в Академию Лени</h1>
+
+        <form class="login">
+            <label for="fname">Логин</label>
+            <input type="text" id="fname" name="fname" placeholder="Введите логин">
+
+            <label for="lname">Пароль</label>
+            <input type="password" id="lname" name="lname" placeholder="Введите пароль">
+
+            <button type="submit">Вход</button>
+        </form>
     </div>
-
-    <script>
-       function login() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var errorMsg = document.getElementById("error-msg");
-
-    if (username === "admin" && password === "1234") {
-        localStorage.setItem("loggedIn", "true"); // Store login status
-        alert("Login successful!");
-        window.location.href = "home.html"; // Redirect to home page
-    } else {
-        errorMsg.textContent = "Invalid username or password!";
-    }
-}
-
-    </script>
-
 </body>
 </html>
