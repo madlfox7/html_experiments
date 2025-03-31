@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     background-color: white;
+
 }
 
 /* Flex container to center content */
@@ -29,25 +30,32 @@ body {
 
 /* Logo */
 .logo img {
-    width: 300px; /* Adjust size */
-    height: auto;
-    margin-bottom: 10px;
+    width: 350px; /* Adjust size */
+    height: 300;
+    margin-bottom: -60px;
 }
 
 /* Title */
 h1 {
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 33px;
+    color: #555;
+    background-color: white;
+    margin-bottom: 3px;
+    /* color: rgb(52, 52, 61); */
+    /* border-style: double;
+    border-color: rgb(61, 61, 70) rgb(19, 19, 20) rgb(61, 61, 70) rgb(19, 19, 20);
+    border-radius: 5px; */
+    text-shadow: 0 1px 1px #3b3434;
 }
 
 /* Login form */
 .login {
     width: 100%;
     padding: 20px;
-    background: rgba(244, 244, 244, 0.9);
+    /* background: rgba(244, 244, 244, 0.9); */
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(38, 37, 43, 0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -55,10 +63,12 @@ h1 {
 
 /* Labels */
 .login label {
-    font-size: 14px;
+    font-size: 20px;
+    color: #444;
     font-weight: bold;
-    color: #333;
-    text-align: left;
+     text-align: left; 
+    background-color: #fcfcfc; 
+  
 }
 
 /* Input fields */
@@ -74,7 +84,7 @@ h1 {
 .login button {
     width: 100%;
     padding: 10px;
-    background: #007bff;
+    background: #5c6dd8;
     border: none;
     color: white;
     font-size: 16px;
@@ -85,7 +95,7 @@ h1 {
 }
 
 .login button:hover {
-    background: #0056b3;
+    background: #495ddd;
 }
 
 /* Adjust layout for small screens */
